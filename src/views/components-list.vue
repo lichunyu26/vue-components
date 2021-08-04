@@ -5,9 +5,11 @@
         <h2>{{mgs2}}</h2>
         <input type="text"
                v-model="mgs2">
-        <button @click="setMsgWithOtherVal"></button>
 
-        <a-button type="primary">Primary Button</a-button>
+        <a-button type="primary"
+                  @click="setMsgWithOtherVal">
+            Primary Button
+        </a-button>
     </div>
 </template>
 
@@ -22,7 +24,7 @@
         msg = 'AAA'
         mgs2 = "BBB"
 
-        public setMsgWithOtherVal():void {
+        public setMsgWithOtherVal(): void {
             console.log(this.$route)
             console.log(this.$router)
             this.msg = this.mgs2
