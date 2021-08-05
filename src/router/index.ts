@@ -4,11 +4,11 @@ import {createRouter, createWebHashHistory, RouteRecordRaw} from 'vue-router'
 export const routesList: Array<RouteRecordRaw> = [
     {
         path: 'digital-scroll',
-        name: 'home',
+        name: 'DigitalScroll',
         meta: {
             title: "数字滚动"
         },
-        component: () => import('@/views/Home.vue')
+        component: () => import('@/components/digital-scroll/index.tsx'),
     },
     {
         path: 'font-animation',
@@ -25,14 +25,16 @@ export const routesList: Array<RouteRecordRaw> = [
                     title: "动画效果1"
                 },
                 component: () => import('@/components/font-animation/example-1.vue'),
-            },{
+            }, {
                 path: 'example-2',
                 name: 'Example-2',
                 meta: {
                     title: "动画效果2"
                 },
-                component: () => import('@/components/font-animation/example-2.vue'),
+                // @ts-ignore
+                component: () => import('@/components/font-animation/example-2.tsx'),
             },
+
         ]
     }
 ]

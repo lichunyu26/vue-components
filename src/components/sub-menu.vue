@@ -12,7 +12,7 @@
             v-else
             :key="itemRoute.path">
         <router-link
-                :to="spliceFullPath"> {{itemRoute.meta.title}}{{pathPrefix}}
+                :to="spliceFullPath"> {{itemRoute.meta.title}}
         </router-link>
     </a-menu-item>
 </template>
