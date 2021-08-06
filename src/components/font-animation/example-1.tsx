@@ -8,9 +8,7 @@ export default class fontAnimationExample1 extends fontAnimationPublic {
                 <p class="landIn" id="example1DomP"/>
             </div>
         </template>
-
     }
-
     refreshText(txt: string = 'Hello World'): void {
         let letters = txt.split("");
         const example1DomP = document.getElementById("example1DomP")

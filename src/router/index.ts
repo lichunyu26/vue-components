@@ -9,6 +9,13 @@ export const routesList: Array<RouteRecordRaw> = [
             title: "数字滚动"
         },
         component: () => import('@/components/digital-scroll/index.tsx'),
+    }, {
+        path: 'screen-shots',
+        name: 'Screenshots',
+        meta: {
+            title: "屏幕截图"
+        },
+        component: () => import('@/components/screenshots/index.tsx'),
     },
     {
         path: 'font-animation',
