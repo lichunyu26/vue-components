@@ -24,7 +24,7 @@ export const routesList: Array<RouteRecordRaw> = [
                 meta: {
                     title: "动画效果1"
                 },
-                component: () => import('@/components/font-animation/example-1.vue'),
+                component: () => import('@/components/font-animation/example-1.tsx'),
             }, {
                 path: 'example-2',
                 name: 'Example-2',
