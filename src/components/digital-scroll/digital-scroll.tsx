@@ -48,7 +48,6 @@ export default class DigitalScroll extends Vue {
 
     /*当发生变化的时候*/
     async run2preNum(defaultNum: number = 0, preNum: number = 0, scrollTime: number = 1000, onceTime: number = 10, domID: string): Promise<any> {
-        console.log(defaultNum,preNum)
         const dom = document.getElementById(domID)
         if (!dom) {
             await this.$nextTick()
