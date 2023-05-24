@@ -1,8 +1,7 @@
-'use strict'
-import {createRouter, createWebHashHistory, RouteRecordRaw} from 'vue-router'
-
+'use strict';
+import { createRouter, createWebHashHistory } from 'vue-router';
 /*子路由*/
-export const routesList: Array<RouteRecordRaw> = [
+export const routesList = [
     {
         path: 'digital-scroll',
         name: 'DigitalScroll',
@@ -51,14 +50,14 @@ export const routesList: Array<RouteRecordRaw> = [
             title: "时间选择器"
         },
         component: () => import('@/components/datetime-picker/index.vue'),
-    },{
+    }, {
         path: 'openlayer-map',
         name: 'olMap',
         meta: {
             title: "openlayer+天地图"
         },
         component: () => import('@/components/ol-map/Map.vue'),
-    },{
+    }, {
         path: 'dom2img-lazy-loading',
         name: 'LazyLoading',
         meta: {
@@ -66,28 +65,26 @@ export const routesList: Array<RouteRecordRaw> = [
         },
         component: () => import('@/components/dom2img-lazy/index.vue'),
     }
-]
-
-const routes: Array<RouteRecordRaw> = [
+];
+const routes = [
     {
         path: '/',
         name: 'home',
         component: () => import('@/views/Home.vue'),
-        redirect:'digital-scroll',
+        redirect: 'digital-scroll',
         children: [{
-            path: 'digital-scroll',
-            name: 'DigitalScroll',
-            meta: {
-                title: "数字滚动"
-            },
-            component: () => import('@/components/digital-scroll/index.tsx'),
-        },...routesList],
-        // redirect:"digital-scroll"
+                path: 'digital-scroll',
+                name: 'DigitalScroll',
+                meta: {
+                    title: "数字滚动"
+                },
+                component: () => import('@/components/digital-scroll/index.tsx'),
+            }, ...routesList],
     },
-]
+];
 const router = createRouter({
     history: createWebHashHistory(),
     routes
-})
-
-export default router
+});
+export default router;
+//# sourceMappingURL=index.js.map

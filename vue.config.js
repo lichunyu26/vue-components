@@ -51,13 +51,24 @@ module.exports = {
             warnings: false,
             errors: true
         },
+        proxy:{
+            "/ol-tianditu": {
+                target: "http://t1.tianditu.gov.cn", //源地址
+                changeOrigin: true, //允许跨域
+                pathRewrite: {
+                    '^/ol-tianditu': '' //路径重写
+                },
+            },
+        }
+
+
     },
     css: {
         requireModuleExtension: true,
         sourceMap: true,
         loaderOptions: {
             less: {
-                lessOptions:{
+                lessOptions: {
                     javascriptEnabled: true
                 }
             }
@@ -65,7 +76,7 @@ module.exports = {
     },
     // 简单配置webpack
     configureWebpack: {
-        name:"This is Ts Project",
+        name: "This is Ts Project",
         // provide the app's title in webpack's name field, so that it can be accessed in index.html to inject the correct title.
         resolve: {
             alias: {
@@ -74,6 +85,15 @@ module.exports = {
         },
         module: {
             rules: [
+                {
+
+                    include:/node_modules/,
+
+                    test:/\.mjs$/,
+
+                    type:'javascript/auto'
+
+                }
                 // {
                 //     test: /\.(js|vue)$/,
                 //     loader: 'eslint-loader',

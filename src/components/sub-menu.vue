@@ -18,6 +18,7 @@
 </template>
 
 <script lang="ts">
+    'use strict'
     import {Options, Vue} from "vue-class-component";
     import {Menu} from 'ant-design-vue'
     import {Prop} from "vue-property-decorator";

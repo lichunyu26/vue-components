@@ -1,3 +1,4 @@
+'use strict'
 import {Vue, Options} from "vue-class-component";
 import DigitalScroll from "@/components/digital-scroll/digital-scroll";
 import {Form, Input} from "ant-design-vue";

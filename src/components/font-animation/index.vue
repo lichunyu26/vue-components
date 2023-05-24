@@ -26,7 +26,7 @@
     </div>
 
 </template>
-<script lang="ts">
+<script lang="ts" >
     import {Options, Vue} from "vue-class-component";
     import {Spin, Input} from "ant-design-vue";
 
@@ -40,7 +40,6 @@
         userEnterChildrenText: string = 'Hello World'
         childrenText: string = 'Hello World'
         isInLoading: boolean = false
-
         toResetChildrenText(): void {
             this.isInLoading = true
             setTimeout(() => {
@@ -50,7 +49,7 @@
 
         }
     }
-
+//
 </script>
 <style lang="less" scoped>
     .font-animation {
